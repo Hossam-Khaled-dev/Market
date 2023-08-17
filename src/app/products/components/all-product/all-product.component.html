@@ -1,1 +1,35 @@
-<p>all-product works!</p>
+  <div class="container">
+    <div class="select-box">
+      <p>Categories:</p>
+      <select class="custom-select">
+        <option value="" disabled selected>Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+    </div>
+
+
+
+    <div *ngFor="let product of Products">   
+      
+       <div class="card">
+
+
+      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <img src={{product.image}} class="img-fluid"/>
+        <a href="#">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.description}}</p>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary">Button</a>
+          <span class="price">{{product.price}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
